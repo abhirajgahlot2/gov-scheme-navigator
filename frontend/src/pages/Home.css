@@ -1,0 +1,217 @@
+.home {
+    min-height: calc(100vh - 65px);
+    padding-bottom: var(--space-16);
+}
+
+/* ─── Hero ─────────────────────────────────────────────── */
+.home__hero {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.home__hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 700px;
+}
+
+.home__heading {
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+    font-weight: 800;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+.home__heading-accent {
+    color: var(--color-primary);
+}
+
+.home__subheading {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    max-width: 580px;
+}
+
+.home__notice {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    background: #f0fdfa;
+    border: 1px solid #99f6e4;
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    line-height: 1.5;
+    max-width: fit-content;
+}
+
+.home__notice svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ─── Results ──────────────────────────────────────────── */
+.home__results {
+    padding-top: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.home__results-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.home__results-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.home__results-subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-1);
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.home__query-echo {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.home__query-label {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.home__query-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.home__cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.home__results-footer {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+/* ─── Search Again Button ──────────────────────────────── */
+.home__search-again-btn {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-4);
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.home__search-again-btn:hover {
+    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.home__search-again-btn--primary {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    font-size: var(--font-size-base);
+    padding: var(--space-3) var(--space-8);
+}
+
+.home__search-again-btn--primary:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: white;
+}
+
+.home__search-again-btn--full {
+    font-size: var(--font-size-base);
+    padding: var(--space-3) var(--space-8);
+}
+
+/* ─── State Screens (Empty / Error) ────────────────────── */
+.home__state-screen {
+    padding-top: var(--space-16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    max-width: 520px;
+}
+
+.home__state-icon {
+    margin-bottom: var(--space-2);
+}
+
+.home__state-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+}
+
+.home__state-body {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 600px) {
+    .home__hero {
+        padding-top: var(--space-8);
+    }
+
+    .home__results-header {
+        flex-direction: column;
+    }
+
+    .home__search-again-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home__state-screen {
+        padding-top: var(--space-10);
+    }
+}

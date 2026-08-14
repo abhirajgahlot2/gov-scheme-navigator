@@ -1,0 +1,132 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.header__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header__product-name {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+/* ── Right group: nav + lang ── */
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.header__nav-link {
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.header__nav-link:hover {
+    color: var(--color-primary);
+    background: #f1f5f9;
+}
+
+.header__nav-link--active {
+    color: var(--color-primary);
+    background: #eff6ff;
+    font-weight: 600;
+}
+
+/* ── Language toggle ── */
+.header__lang {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    border-left: 1px solid var(--color-border);
+    padding-left: var(--space-3);
+    margin-left: var(--space-1);
+}
+
+.header__lang-btn {
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    letter-spacing: 0.05em;
+}
+
+.header__lang-btn:hover {
+    color: var(--color-primary);
+}
+
+.header__lang-btn--active {
+    color: var(--color-primary);
+    background: #eff6ff;
+}
+
+.header__lang-divider {
+    font-size: var(--font-size-xs);
+    color: var(--color-border);
+}
+
+@media (max-width: 600px) {
+    .header__inner {
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+
+    .header__right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header__nav-link {
+        font-size: var(--font-size-xs);
+        padding: var(--space-1) var(--space-2);
+    }
+
+    .header__product-name {
+        font-size: var(--font-size-sm);
+    }
+}

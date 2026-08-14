@@ -1,0 +1,105 @@
+.sources {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+}
+
+.sources__header {
+    margin-bottom: var(--space-10);
+}
+
+.sources__title {
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: var(--space-3);
+}
+
+.sources__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    max-width: 600px;
+}
+
+/* ── Source list ── */
+.sources__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.sources__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5) var(--space-6);
+    transition: box-shadow 0.2s ease;
+}
+
+.sources__item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.sources__item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.sources__item-name {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.sources__item-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.sources__item-dept {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+.sources__item-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: var(--space-2) var(--space-3);
+    border: 1.5px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    transition: background-color 0.15s ease, color 0.15s ease;
+    flex-shrink: 0;
+}
+
+.sources__item-link:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .sources__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+        padding: var(--space-4);
+    }
+
+    .sources__item-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
